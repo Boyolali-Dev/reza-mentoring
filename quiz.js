@@ -6,7 +6,12 @@
  */
 
 // Tulis di sini
+function sum(number_1, number_2) {
+    return number_1 + number_2;
+}
 
+const answer = sum(1,3);
+console.log(answer);
 
 /** 2
  * Buatlah sebuah fungsi untuk perkalian multiply(number_1, number_2)
@@ -16,6 +21,12 @@
  */
 
 // Tulis di sini
+function multiply(number_1, number_2) {
+    return number_1 * number_2;
+}
+
+const result = multiply(1,3);
+console.log(result);
 
 /** 3
  * Buatlah sebuah fungsi untuk pembagian divide(number_1, number_2)
@@ -27,6 +38,16 @@
  */
 
 // Tulis di sini
+function divide(number_1, number_2) {
+    if (number_2 == 0) {
+        return "error, ndak bisa dibagi 0";
+    } else {
+        return number_1 / number_2;
+    } 
+}
+
+const hasil = divide(3,4);
+console.log(hasil);
 
 /** 4
  * Buatlah sebuah fungsi bernama greeting yang menerima satu parameter (nama) 
@@ -36,6 +57,10 @@
  */
 
 // Tulis di sini
+function greeting(nama){
+    return "Hello, " + nama + " !"
+}
+console.log(greeting("Indras"))
 
 /** 5   
  * Buatlah sebuah fungsi bernama cekGenapGanjil 
@@ -46,6 +71,14 @@
  */
 
 // Tulis di sini
+function cekGenapGanjil(angka){
+    if (angka % 2 === 0 ) {
+        return "Genap";
+    } else
+        return "Ganjil";
+}
+console.log(cekGenapGanjil(2))
+console.log(cekGenapGanjil(123))
 
 /** 6   
  * Buatlah sebuah fungsi bernama bandingkanAngka 
@@ -58,6 +91,18 @@
  */
 
 // Tulis di sini
+function bandingkanAngka(angka1, angka2){
+    if (angka1 > angka2) {
+      return "Angka1 lebih besar";
+    } else if (angka2 > angka1) {
+        return "Angka2 lebih besar";
+    } else {
+        return "Angka sama besar";
+    }
+}
+console.log(bandingkanAngka(2,1))
+console.log(bandingkanAngka(12,123))
+console.log(bandingkanAngka(123,123))
 
 /** 7   
  * Buatlah sebuah fungsi bernama reverseString
@@ -68,6 +113,14 @@
  */
 
 // Tulis di sini
+function reverseString(str) {
+    let arrayKarakter = str.split('');
+    let arrayTerbalik = arrayKarakter.reverse();
+    let stringTerbalik = arrayTerbalik.join('');
+    return stringTerbalik;
+}
+console.log(reverseString("indras"))
+console.log(reverseString("reza"))
 
 /** 8   
  * Buatlah sebuah fungsi bernama cekTahunKabisat 
@@ -77,6 +130,16 @@
  * Ex: console.log(cekTahunKabisat(2012)) => true
  * console.log(cekTahunKabisat(2111)) => false
  */
+function cekTahunKabisat(tahun) {
+    if ((tahun % 4 === 0) && (tahun % 100 !== 0) || (tahun % 400 === 0)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(cekTahunKabisat(2012))
+console.log(cekTahunKabisat(2024))
+console.log(cekTahunKabisat(1998))
 
 // Tulis di sini
 
@@ -88,6 +151,11 @@
  */
 
 // Tulis di sini
+function hitungLuasLingkaran(jari_jari) {
+    return 22/7 * (jari_jari * jari_jari );
+}
+console.log(hitungLuasLingkaran(14))
+console.log(hitungLuasLingkaran(7))
 
 /** 10   
  * Buatlah sebuah fungsi bernama 
@@ -96,3 +164,10 @@
  * Ex: console.log(filterAngkaGanjil([1,2,3,4,5,6,8])) => [1,3,5]
  * console.log(filterAngkaGanjil([2,4,6,8,10])) => []
  */
+
+function filterAngka(arr) {
+    const angkaGanjil = arr.filter(angka => angka % 2 !== 0);
+    return angkaGanjil;
+}
+console.log(filterAngka([1,2,3,4,5,6,8]))
+console.log(filterAngka([0,8,1,9,6,5,3,17,18]))
