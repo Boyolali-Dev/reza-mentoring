@@ -58,7 +58,7 @@ console.log(hasil);
 
 // Tulis di sini
 function greeting(nama){
-    return "Hello, " + nama + " !"
+    return `Hello, ${nama}!`
 }
 console.log(greeting("Indras"))
 
@@ -72,10 +72,7 @@ console.log(greeting("Indras"))
 
 // Tulis di sini
 function cekGenapGanjil(angka){
-    if (angka % 2 === 0 ) {
-        return "Genap";
-    } else
-        return "Ganjil";
+    return (angka % 2 === 0 ) ? "Genap": "Ganjil";
 }
 console.log(cekGenapGanjil(2))
 console.log(cekGenapGanjil(123))
@@ -114,13 +111,21 @@ console.log(bandingkanAngka(123,123))
 
 // Tulis di sini
 function reverseString(str) {
-    let arrayKarakter = str.split('');
-    let arrayTerbalik = arrayKarakter.reverse();
-    let stringTerbalik = arrayTerbalik.join('');
-    return stringTerbalik;
+    // 1. Variabel 'hasilbalik' digunakan sebagai string kosong untuk menyimpan hasil pembalikan.
+    let hasilbalik = "";
+    // 2. Perulangan dari indeks terakhir ke indeks pertama dari string 'str'.
+    for (let i = str.length - 1; i >= 0; i--) {
+        // 3. Concatenate karakter ke-i dari 'str' ke variabel 'hasilbalik'.
+        hasilbalik += str[i];
+    }
+    // 4. Kembalikan hasil pembalikan.
+    return hasilbalik;
 }
+
 console.log(reverseString("indras"))
 console.log(reverseString("reza"))
+console.log(reverseString("kasurbantal"))
+console.log(reverseString("kasurrusak"))
 
 /** 8   
  * Buatlah sebuah fungsi bernama cekTahunKabisat 
@@ -152,7 +157,7 @@ console.log(cekTahunKabisat(1998))
 
 // Tulis di sini
 function hitungLuasLingkaran(jari_jari) {
-    return 22/7 * (jari_jari * jari_jari );
+    return Math.PI * (jari_jari * jari_jari) ;
 }
 console.log(hitungLuasLingkaran(14))
 console.log(hitungLuasLingkaran(7))
@@ -164,6 +169,11 @@ console.log(hitungLuasLingkaran(7))
  * Ex: console.log(filterAngkaGanjil([1,2,3,4,5,6,8])) => [1,3,5]
  * console.log(filterAngkaGanjil([2,4,6,8,10])) => []
  */
+// function filterAngka menerima sebuah parameter yaitu arr, 
+// sedangkan filter adalah metode yang digunakan dalam fungsi ini. 
+// Arrow function digunakan untuk menmeriksa kondisi yang diterapkan, apakah sebuah angka ganjil atau bukan.
+// Jika angka tersebut habis dibagi 2 dan memiliki sisa, maka dianggap ganjil (angka % 2 !== 0)
+
 
 function filterAngka(arr) {
     const angkaGanjil = arr.filter(angka => angka % 2 !== 0);
