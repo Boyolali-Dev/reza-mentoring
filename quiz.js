@@ -87,7 +87,7 @@ console.log(cekGenapGanjil(123))
  * console.log(bandingkanAngka(0, 666)) => "666 lebih besar"
  */
 
-// Tulis di sini
+// Tulis di sini komen
 function bandingkanAngka(angka1, angka2){
     if (angka1 > angka2) {
       return "Angka1 lebih besar";
