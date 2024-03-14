@@ -34,12 +34,12 @@
         max-width: 1140px;
       	margin: 0 auto;
         display: flex;
+        gap: 16px;
     }
 
     .column {
         flex: 1;
         padding: 20px;
-        justify-content: center;
     }
     
     input[type="text"] {
@@ -66,79 +66,6 @@
       color: #1F376F;
     }
 
-    .card-1 {
-      max-width: 240px;
-      border-radius: 14px;
-      background-color: #fff;
-      color: #000000;
-      padding: 8px;
-      border: 2px solid #747474;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(3, 0, 0, 0.438);
-    }
-    .card-2 {
-      max-width: 240px;
-      border-radius: 14px;
-      background-color: #fff;
-      color: #000000;
-      padding: 8px;
-      border: 2px solid #F17B4B;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(3, 0, 0, 0.438);
-    }
-    .card-3 {
-      max-width: 240px;
-      border-radius: 14px;
-      background-color: #fff;
-      color: #000000;
-      padding: 8px;
-      border: 2px solid #F8E42F;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(3, 0, 0, 0.438);
-    }
-    .card-4 {
-      max-width: 240px;
-      border-radius: 14px;
-      background-color: #fff;
-      color: #000000;
-      padding: 8px;
-      border: 2px solid #1AADAD;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(3, 0, 0, 0.438);
-    }
-    .card-5 {
-      max-width: 240px;
-      border-radius: 14px;
-      background-color: #fff;
-      color: #000000;
-      padding: 8px;
-      border: 2px solid #79A75B;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(3, 0, 0, 0.438);
-    }
-    .card-6 {
-      max-width: 240px;
-      border-radius: 14px;
-      background-color: #fff;
-      color: #000000;
-      padding: 8px;
-      border: 2px solid #F17B4B;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 4px 10px rgba(3, 0, 0, 0.438);
-    }
-
-    .card-content {
-      font-weight: bold;
-      text-align: left;
-      padding-left: 10px;
-    }
-
     footer::before {
       content: "";
       display: block;
@@ -148,6 +75,56 @@
       margin: 0 auto 20px;
     }
 
+    /* Flex */
+    .pokemon-card {
+      display: flex;
+      flex-direction: column;
+      padding: 2px;
+      flex: 1;
+      max-width: 240px;
+      max-height: 360px;
+      border-radius: 14px;
+      background-color: #fff;
+      color: #000000;
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(3, 0, 0, 0.438);
+    }
+
+    .card-content {
+      font-weight: bold;
+      text-align: left;
+      padding-left: 20px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .card-content img {
+      max-width: auto;
+      height: auto;
+    }
+    
+    .border-black{
+      border: 2px solid #747474;
+     }
+    .border-blue{
+      border: 2px solid blue;
+     }
+    .border-green{
+      border: 2px solid green;
+     }
+    .border-yellow{
+      border: 2px solid yellow;
+    }    
+    .border-orange{
+      border: 2px solid #F17B4B;
+    }
+    .border-tosca{
+      border: 2px solid #1AADAD;
+    }
+    
   </style>
 </head>
 <body>
@@ -171,9 +148,9 @@
   <main>
     <div class="container">
       <div class="column" id="left-column">
-        <div class="card-1">
-          <img src="./asset/Alakazam.png" alt="Alakazam">
+        <div class="pokemon-card border-black">
           <div class="card-content">
+            <img src="asset/Alakazam.png" />
             <p>Name: Alakazam</p>
             <p>Rairly: Rare</p>
             <p>Card No: 1</p>
@@ -182,9 +159,9 @@
         </div>
       </div>
       <div class="column" id="center-column">
-        <div class="card-2">
-          <img src="./asset/Charmander.png" alt="Charmander">
+        <div class="pokemon-card border-orange">
           <div class="card-content">
+            <img src="asset/Charmander.png" />
             <p>Name: Charmander</p>
             <p>Rairly: Common</p>
             <p>Card No: 46</p>
@@ -193,9 +170,9 @@
         </div>
       </div>
       <div class="column" id="right-column">
-        <div class="card-3">
-          <img src="./asset/Pikachu.png" alt="Pikachu">
+        <div class="pokemon-card border-yellow">
           <div class="card-content">
+            <img src="asset/Pikachu.png" />
             <p>Name: Pikachu</p>
             <p>Rairly: Common</p>
             <p>Card No: 58</p>
@@ -206,9 +183,9 @@
     </div>
     <div class="container">
       <div class="column" id="left-column">
-        <div class="card-4">
-          <img src="./asset/Squirtel.png" alt="Squirtel">
+        <div class="pokemon-card border-tosca">
           <div class="card-content">
+            <img src="./asset/Squirtel.png" alt="Squirtel">
             <p>Name: Squirtle</p>
             <p>Rairly: Common</p>
             <p>Card No: 63</p>
@@ -217,9 +194,9 @@
         </div>
       </div>
       <div class="column" id="center-column">
-        <div class="card-5">
-          <img src="./asset/Bulbasaur.png" alt="Bulbasaur">
+        <div class="pokemon-card border-green">
           <div class="card-content">
+            <img src="./asset/Bulbasaur.png" alt="Bulbasaur">
             <p>Name: Bulbasaur</p>
             <p>Rairly: Common</p>
             <p>Card No: 44</p>
@@ -228,9 +205,9 @@
         </div>
       </div>
       <div class="column" id="right-column">
-        <div class="card-6">
-          <img src="./asset/Charizard.png" alt="Charizard">
+        <div class="pokemon-card border-orange">
           <div class="card-content">
+            <img src="./asset/Charizard.png" alt="Charizard">
             <p>Name: Charizard</p>
             <p>Rairly: Rare Holo</p>
             <p>Card No: 4</p>
