@@ -74,6 +74,12 @@
       background-color: black;
       margin: 0 auto 20px;
     }
+    
+    footer .container {
+      max-width: 2560px;
+      display: flex;
+      justify-content: space-between;
+    }
 
     /* Flex */
     .pokemon-card {
@@ -148,7 +154,7 @@
 
   <main>
     <div class="container">
-      <div class="column" id="left-column">
+      <div class="column">
         <div class="pokemon-card border-black">
           <img src="asset/Alakazam.png" />
           <div class="card-content">
@@ -159,7 +165,7 @@
           </div>
         </div>
       </div>
-      <div class="column" id="center-column">
+      <div class="column">
         <div class="pokemon-card border-orange">
           <img src="asset/Charmander.png" />
           <div class="card-content">
@@ -170,7 +176,7 @@
           </div>
         </div>
       </div>
-      <div class="column" id="right-column">
+      <div class="column">
         <div class="pokemon-card border-yellow">
           <img src="asset/Pikachu.png" />
           <div class="card-content">
@@ -183,7 +189,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="column" id="left-column">
+      <div class="column">
         <div class="pokemon-card border-tosca">
           <img src="./asset/Squirtel.png" alt="Squirtel">
           <div class="card-content">
@@ -194,7 +200,7 @@
           </div>
         </div>
       </div>
-      <div class="column" id="center-column">
+      <div class="column">
         <div class="pokemon-card border-green">
           <img src="./asset/Bulbasaur.png" alt="Bulbasaur">
           <div class="card-content">
@@ -205,7 +211,7 @@
           </div>
         </div>
       </div>
-      <div class="column" id="right-column">
+      <div class="column">
         <div class="pokemon-card border-orange">
           <img src="./asset/Charizard.png" alt="Charizard">
           <div class="card-content">
@@ -220,11 +226,25 @@
   </main>
 
   <footer>
-    <img src="./asset/pngfind2.png" alt="bola ubi">
-    <img src="./asset/pngfind2.png" alt="bola ubi">
-    <img src="./asset/pngfind2.png" alt="bola ubi">
-    <img src="./asset/pngfind2.png" alt="bola ubi">
-    <img src="./asset/pngfind2.png" alt="bola ubi">
+    <div class="container">
+      <div class="column">
+        <img src="./asset/pngfind8.png">
+      </div>
+      <div class="column" id="image-container">
+        <script>
+          let container = document.getElementById("image-container");
+          for (let i = 0; i < 5; i++) {
+            let img = document.createElement("img");
+            img.src = "./asset/pngfind2.png";
+            img.alt = "bola ubi";
+            container.appendChild(img);
+          }
+        </script>
+      </div>
+      <div class="column">
+        <img src="./asset/pngfind7.png">
+      </div>
+    </div>
   </footer>
 
 </body>
