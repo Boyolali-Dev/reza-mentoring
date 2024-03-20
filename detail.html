@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Detail</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      color: #1F376F;
+    }
+    .detail {
+      margin-top: 20px;
+    }
+    p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pokemon Detail</h1>
+  <div class="detail">
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Rarity:</strong> <span id="rarity"></span></p>
+    <p><strong>Card No:</strong> <span id="cardNo"></span></p>
+    <p><strong>Power:</strong> <span id="power"></span></p>
+  </div>
+
+  <script>
+    // Mendapatkan parameter dari URL
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get('name');
+    const rarity = params.get('rarity');
+    const cardNo = params.get('cardNo');
+    const power = params.get('power');
+
+    // Menampilkan data pada halaman
+    document.getElementById('name').innerText = name;
+    document.getElementById('rarity').innerText = rarity;
+    document.getElementById('cardNo').innerText = cardNo;
+    document.getElementById('power').innerText = power;
+  </script>
+</body>
+</html>

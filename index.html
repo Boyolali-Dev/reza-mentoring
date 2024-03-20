@@ -155,6 +155,7 @@
   <main>
     <div class="container">
       <div class="column">
+        <a style="text-decoration:none" href="detail.html">
         <div class="pokemon-card border-black">
           <img src="asset/Alakazam.png" />
           <div class="card-content">
@@ -164,8 +165,10 @@
             <p>Power: Double Colorless</p>
           </div>
         </div>
+        </a>
       </div>
       <div class="column">
+        <a style="text-decoration:none" href="detail.html">
         <div class="pokemon-card border-orange">
           <img src="asset/Charmander.png" />
           <div class="card-content">
@@ -175,8 +178,10 @@
             <p>Power: Fire</p>
           </div>
         </div>
+        </a>
       </div>
       <div class="column">
+        <a style="text-decoration:none" href="detail.html">
         <div class="pokemon-card border-yellow">
           <img src="asset/Pikachu.png" />
           <div class="card-content">
@@ -186,10 +191,12 @@
             <p>Power: Lighting</p>
           </div>
         </div>
+        </a>
       </div>
     </div>
     <div class="container">
       <div class="column">
+        <a style="text-decoration:none" href="detail.html">
         <div class="pokemon-card border-tosca">
           <img src="./asset/Squirtel.png" alt="Squirtel">
           <div class="card-content">
@@ -199,8 +206,10 @@
             <p>Power: Water</p>
           </div>
         </div>
+        </a>
       </div>
       <div class="column">
+        <a style="text-decoration:none" href="detail.html">
         <div class="pokemon-card border-green">
           <img src="./asset/Bulbasaur.png" alt="Bulbasaur">
           <div class="card-content">
@@ -210,8 +219,10 @@
             <p>Power: Grass</p>
           </div>
         </div>
+        </a>
       </div>
       <div class="column">
+        <a style="text-decoration:none" href="detail.html">
         <div class="pokemon-card border-orange">
           <img src="./asset/Charizard.png" alt="Charizard">
           <div class="card-content">
@@ -221,6 +232,7 @@
             <p>Power: Fire</p>
           </div>
         </div>
+        </a>
       </div>
     </div>
   </main>
@@ -248,4 +260,26 @@
   </footer>
 
 </body>
+
+<script>
+  // Mendapatkan semua elemen dengan kelas card-content
+  let cardContents = document.querySelectorAll('.card-content');
+
+  // Loop melalui setiap elemen card-content dan tambahkan event listener untuk mengarahkan ke halaman baru
+  cardContents.forEach(cardContent => {
+    cardContent.addEventListener('click', function() {
+      // Mendapatkan data dari elemen card-content yang diklik
+      let name = this.querySelector('p:nth-child(1)').innerText.split(": ")[1];
+      let rarity = this.querySelector('p:nth-child(2)').innerText.split(": ")[1];
+      let cardNo = this.querySelector('p:nth-child(3)').innerText.split(": ")[1];
+      let power = this.querySelector('p:nth-child(4)').innerText.split(": ")[1];
+
+      // Membuat URL baru dengan data tersebut
+      let newURL = `detail.html?name=${name}&rarity=${rarity}&cardNo=${cardNo}&power=${power}`;
+
+      // Membuka halaman baru dengan URL yang baru
+      window.open(newURL, '_blank');
+    });
+  });
+</script>
 </html>
